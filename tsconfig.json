@@ -1,0 +1,13 @@
+{
+    "exclude": [
+        "temp.ts"
+    ],
+    "compilerOptions": {
+        "lib": ["ES2020"],
+        "types": ["node"],
+        //"typeRoots": [ "../node_modules/@types" ],
+        "sourceMap": true,
+        //"strict": true,
+        "downlevelIteration": true
+    }
+}
