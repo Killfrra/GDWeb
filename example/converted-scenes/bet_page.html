@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div name="BetPage" class="Control" style=" top: 0; left: 0; width: 100%; height: calc(100% + 1px);">
+    <div name="CenterContainer" class="Container" style=" top: 0; left: 0; width: 100%; height: 100%;">
+        <div name="Control" class="Panel" style=" min-width: 250px; min-height: 276px; width: 100%; height: 100%; max-width: 360px; left: max(0px, calc((100% - 360px) / 2)); max-height: 380px; top: max(0px, calc(100% - 380px) / 2));">
+            <div name="Reference" class="TextureRect" style=" top: -27px; left: 0; width: 100%; height: calc(100% + 27px); display: none; background-image: url('References/3-item.png'); background-size: contain;"></div>
+            <div name="TextureRect" class="Container" style=" top: 28px; left: 30px; width: calc(100% - 60px); height: calc(99.9% - 233px);">
+                <div name="Control" class="Control" style=" width: 100%; height: 100%; max-width: 300px; left: max(0px, calc((100% - 300px) / 2));">
+                    <div name="TextureRect2" class="TextureRect" style=" top: 0; left: 0; width: 48.3%; height: 100%; background-image: url('icon.png'); background-size: contain; background-position: center;"></div>
+                    <div name="TextureRect3" class="TextureRect" style=" top: 0; left: calc(50% + 5px); width: calc(50% - 5px); height: calc(100% + 1px); background-image: url('icon.png'); background-size: contain; background-position: center;"></div>
+                    <div name="TextureRect" class="TextureRect" style=" top: calc(50% - 40px); left: calc(50% - 40px); width: 80px; height: 80px; background-image: url('icon.png'); background-size: contain; background-position: center;"></div>
+                </div>
+            </div>
+            <button name="Close" class="Button" style=" top: 30px; left: calc(100% - 72px); width: 42px; height: 42px;">X
+                <div name="HSeparator3" class="ColorRect" style=" top: calc(50% - 2px); left: calc(50% - 15px); width: 29px; height: 4px; transform: rotate(45deg); transform-origin: 14.5px 2px"></div>
+                <div name="HSeparator4" class="ColorRect" style=" top: calc(50% - 2px); left: calc(50% - 15px); width: 29px; height: 4px; transform: rotate(-45deg); transform-origin: 14.5px 2px"></div>
+            </button>
+            <div name="Control" class="Container" style=" top: calc(100% - 184px); left: 0; width: 100%; height: 184px;">
+                <div name="Control2" class="Control" style=" width: 100%; height: 100%; max-width: 360px; left: max(0px, calc((100% - 360px) / 2));">
+                    <div name="HBoxContainer" class="HBoxContainer" style=" top: 10px; left: 30px; width: calc(100% - 60px); height: 55px;">
+                        <div name="Button" class="Control" style=" flex-grow: 1;">
+                            <button name="Button4" class="Button" style=" top: 0; left: 0; width: 100%; height: 36px; flex-grow: 1;">PSG.LGD</button>
+                            <div name="Label" class="Label" style=" top: calc(100% - 14px); left: 0; width: 100%; height: 14px; text-align: center;">1.23</div>
+                        </div>
+                        <div name="Button2" class="Control" style=" min-width: 42px;">
+                            <button name="Button4" class="Button" style=" top: 0; left: 0; width: 100%; height: 36px;">draw</button>
+                            <div name="Label" class="Label" style=" top: calc(100% - 14px); left: 0; width: 100%; height: 14px; text-align: center;">1.23</div>
+                        </div>
+                        <div name="Button3" class="Control" style=" flex-grow: 1;">
+                            <button name="Button4" class="Button" style=" top: 0; left: 0; width: 100%; height: 36px; flex-grow: 1;">Evil Geniuses</button>
+                            <div name="Label" class="Label" style=" top: calc(100% - 14px); left: 0; width: 100%; height: 14px; text-align: center;">1.23</div>
+                        </div>
+                    </div>
+                    <div name="Control" class="Control" style=" top: 65px; left: 30px; width: calc(100% - 60px); height: 47px;">
+                        <div name="LineEdit3" class="Control" style=" top: 10px; left: 0; width: calc(50% - 5px); height: calc(100% - 20px);">
+                            <input name="LineEdit" class="LineEdit" style=" top: 0; left: 0; width: calc(100% - 39px); height: 100%; text-align: right;" placeholder="AMOUNT">
+                            <button name="LineEdit2" class="Button" style=" top: 0; left: calc(100% - 39px); width: 39px; height: 100%;">USD</button>
+                        </div>
+                        <div name="LineEdit4" class="Control" style=" top: 10px; left: calc(50% + 5px); width: calc(50% - 5px); height: calc(100% - 20px);">
+                            <input name="LineEdit" class="LineEdit" style=" top: 0; left: 0; width: calc(100% - 39px); height: 100%; text-align: right;" value="200">
+                            <div name="Label" class="Label" style=" top: 0; left: 5px; width: calc(100% - 77px); height: 100%;">C4ET:</div>
+                            <button name="LineEdit2" class="Button" style=" top: 0; left: calc(100% - 39px); width: 39px; height: 100%;">USD</button>
+                        </div>
+                    </div>
+                    <button name="Buy" class="Button" style=" top: calc(100% - 60px); left: 64px; width: calc(100% - 128px); height: 36px;">PLACE BET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="cleaner.js"></script>
+</body>
+</html>

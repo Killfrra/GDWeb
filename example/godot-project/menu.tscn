@@ -1,0 +1,205 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control3" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Control3"]
+anchor_right = 1.0
+margin_left = 127.0
+margin_top = 30.0
+margin_right = -30.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 80, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="Control3/Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -59.981
+margin_right = 0.0190125
+rect_min_size = Vector2( 60, 0 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="."]
+anchor_bottom = 1.0
+margin_right = 243.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 232, 464 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5-Menu bets" type="TextureRect" parent="Control2/Panel"]
+visible = false
+margin_right = 369.0
+margin_bottom = 600.0
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuLabel" type="Label" parent="Control2/Panel"]
+margin_left = 30.0
+margin_top = 50.0
+margin_right = 61.0
+margin_bottom = 64.0
+rect_scale = Vector2( 2.8, 2.8 )
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Items" type="VBoxContainer" parent="Control2/Panel"]
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 119.0
+margin_right = 207.0
+margin_bottom = -30.0
+rect_min_size = Vector2( 183, 0 )
+custom_constants/separation = 14
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Language" type="OptionButton" parent="Control2/Panel/Items"]
+margin_right = 183.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 0, 33 )
+text = "Language"
+
+[node name="Currency" type="OptionButton" parent="Control2/Panel/Items"]
+margin_top = 47.0
+margin_right = 183.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 33 )
+text = "Currency"
+
+[node name="Inventory" type="Button" parent="Control2/Panel/Items"]
+margin_top = 94.0
+margin_right = 183.0
+margin_bottom = 127.0
+rect_min_size = Vector2( 0, 33 )
+text = "Inventory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShoppingCart" type="Button" parent="Control2/Panel/Items"]
+margin_top = 141.0
+margin_right = 183.0
+margin_bottom = 174.0
+rect_min_size = Vector2( 0, 33 )
+text = "Shopping cart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YourItems" type="Button" parent="Control2/Panel/Items"]
+margin_top = 188.0
+margin_right = 183.0
+margin_bottom = 221.0
+rect_min_size = Vector2( 0, 33 )
+text = "Your items"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bottom" type="Control" parent="Control2/Panel/Items"]
+margin_top = 235.0
+margin_right = 183.0
+margin_bottom = 491.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 3
+
+[node name="Terms" type="Button" parent="Control2/Panel/Items/Bottom"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -80.7656
+margin_bottom = -47.7656
+rect_min_size = Vector2( 0, 33 )
+text = "Terms"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icons" type="HBoxContainer" parent="Control2/Panel/Items/Bottom"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -33.0
+rect_min_size = Vector2( 0, 33 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control2/Panel/Items/Bottom/Icons"]
+margin_right = 33.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 33, 0 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="Control2/Panel/Items/Bottom/Icons"]
+margin_left = 38.0
+margin_right = 71.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 33, 0 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect3" type="TextureRect" parent="Control2/Panel/Items/Bottom/Icons"]
+margin_left = 76.0
+margin_right = 109.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 33, 0 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect4" type="TextureRect" parent="Control2/Panel/Items/Bottom/Icons"]
+margin_left = 114.0
+margin_right = 147.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 33, 0 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect5" type="TextureRect" parent="Control2/Panel/Items/Bottom/Icons"]
+margin_left = 152.0
+margin_right = 185.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 33, 0 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6

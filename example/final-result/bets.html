@@ -1,0 +1,202 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="default_styles.css">
+    <link rel="stylesheet" href="shop_and_bets.css">
+    <style>
+        [name="BetPage"], [name="BetPage"] > [name="CenterContainer"] {
+            pointer-events: none;
+        }
+        [name="Modal"] {
+            top: calc(100% + 16px) !important;
+            pointer-events: all;
+            box-shadow: 0px 0px 16px 5px black;
+            transition: top 0.2s;
+        }
+        [name="Modal"].shown {
+            top: max(0px, calc(100% - 380px)) !important;
+        }
+        [name="Emblems"] > .TextureRect {
+            border-radius: 4px;
+        }
+        .Button[name="Variant"] {
+            text-transform: none;
+            border-radius: 0;
+            text-align: center;
+            line-height: 27px;
+        }
+        [name="match-result"]:checked+.Button[name="Variant"] {
+            background-color: #76cb68;
+            color: black;
+        }
+        [name="Variants"] input {
+            visibility: hidden;
+        }
+        [name="Variants"] > *:nth-child(1) > [name="Variant"] {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        /*
+        [name="Variants"] > *:nth-child(2) > [name="Variant"] {
+            border-right: 1px solid #212126;
+            border-left: 1px solid #212126;
+        }
+        */
+        [name="Variants"] > *:nth-child(3) > [name="Variant"] {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .LineEdit {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div name="Shop" class="Control" style=" top: 0; left: 0; width: 100%; height: 100%;">
+    <div name="Reference" class="TextureRect" style=" top: 0; left: 0; width: 360px; height: 793px; display: none; background-image: url('References/1-shop.png'); background-size: contain;"></div>
+    <div name="CenterContainer" class="Container" style=" top: 0; left: 0; width: 100%; height: 100%;">
+        <div name="Control" class="Panel" style=" min-width: 250px; width: 100%; height: 100%; max-width: 720px; left: max(0px, calc((100% - 720px) / 2));">
+            <div name="Panel" class="Panel" style=" top: 0; left: 0; width: 100%; height: 47px;">
+                <button name="Menu" class="Button" style=" top: 0; left: 0; width: 47px; height: 100%;">
+                    <div name="HSeparator" class="ColorRect" style=" top: calc(33% - 2px); left: 6px; width: calc(100% - 12px); height: 4px;"></div>
+                    <div name="HSeparator3" class="ColorRect" style=" top: calc(50% - 2px); left: 6px; width: calc(100% - 12px); height: 4px;"></div>
+                    <div name="HSeparator2" class="ColorRect" style=" top: calc(67% - 1px); left: 6px; width: calc(100% - 12px); height: 4px;"></div>
+                </button>
+                <div name="Logo" class="Label" style=" top: 0; left: 47px; width: 86px; height: 100%; text-align: center;">2<span style="position: static; color: red;">X</span>Bet</div>
+                <div name="Control" class="Control" style=" top: 0; left: 133px; width: calc(100% - 180px); height: 100%;">
+                    <div name="Control" class="Container" style=" top: 0; left: 0; width: 100%; height: 100%; text-align: right;">
+                        <div name="Control" class="Control" style=" width: 100%; height: 100%; max-width: 191px; left: max(0px, 100% - 191px);">
+                            <button name="SignIn" class="Button" style=" top: 5px; left: 5px; width: calc(100% - 10px); height: calc(100% - 10px); min-width: 63px;">SIGN IN THROUGH STEAM</button>
+                        </div>
+                    </div>
+                </div>
+                <a href="shop.html" name="Back" class="Button" style=" top: 0; left: calc(100% - 47px); width: 47px; height: 100%;">
+                    <div name="ColorRect" class="ColorRect" style=" top: 22px; left: 6px; width: 31px; height: 4px;"></div>
+                    <div name="ColorRect2" class="ColorRect" style=" top: 24px; left: 40px; width: 24px; height: 4px; transform: rotate(135deg);"></div>
+                    <div name="ColorRect3" class="ColorRect" style=" top: 26px; left: 38px; width: 24px; height: 4px; transform: rotate(-135deg);"></div>
+                </a>
+            </div>
+            <div name="Control" class="Control" style=" top: 47px; left: 0; width: 100%; height: 43px;">
+                <div name="Control" class="Control" style=" top: 5px; left: 5px; width: calc(100% - 10px); height: calc(100% - 10px);">
+                    <div name="Control" class="Control" style=" top: 0; left: 0; width: calc(50% - 2px); height: 100%;">
+                        <input name="Balance" class="LineEdit" style=" top: 0; left: 0; width: calc(100% - 39px); height: 100%; text-align: right;" disabled value="200">
+                        <button name="Currency" class="Button" style=" top: 0; left: calc(100% - 39px); width: 39px; height: 100%;">USD</button>
+                    </div>
+                    <input name="Search" class="LineEdit" style=" top: 0; left: calc(50% + 2px); width: calc(50% - 2px); height: 100%; text-align: right;" placeholder="type to search">
+                </div>
+            </div>
+            <div name="Control2" class="Control" style=" top: 90px; left: 0; width: 100%; height: 43px;">
+                <div name="Control" class="Control" style=" top: 5px; left: 5px; width: calc(100% - 10px); height: calc(100% - 10px);">
+                    <select name="Panel" class="OptionButton" style=" top: 0; left: 0; width: calc(50% - 2px); height: 100%;">
+                        <option>Any game</option>
+                        <option>Dota 2</option>
+                        <option>CS:GO</option>
+                        <option>League of Legends</option>
+                        <option>Overwatch</option>
+                    </select>
+                    <select name="LineEdit" class="OptionButton" style=" top: 0; left: calc(50% + 2px); width: calc(50% - 2px); height: 100%;">
+                        <option>Any tournament</option>
+                        <option>Majors</option>
+                        <option>ESL</option>
+                        <option>Starladder</option>
+                        <option>WePlay</option>
+                    </select>
+                </div>
+            </div>
+            <div name="GridContainer2" class="ScrollContainer" style=" top: 133px; left: 0; width: 100%; height: calc(100% - 133px); overflow-x: auto; overflow-y: auto;">
+                <div name="GridContainer" class="GridContainer" style=" flex-grow: 1;">
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Logos/weplay.jpeg');"></div>
+                        <div name="Label" class="Label" >PSG.LGD vs Evil Geniuses</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Logos/Starladder.jpg');"></div>
+                        <div name="Label" class="Label">NaVi vs Virtus.Pro</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Logos/ESL.jpg');"></div>
+                        <div name="Label" class="Label">Team Spirits vs Ehome</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Logos/Major.png');"></div>
+                        <div name="Label" class="Label">NiP vs Team Liquid</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Logos/Starladder.jpg');"></div>
+                        <div name="Label" class="Label">Alliance vs Team Secret</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Logos/ESL.jpg');"></div>
+                        <div name="Label" class="Label">OG vs Nigma</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div name="BetPage" class="Control" style=" top: 0; left: 0; width: 100%; height: calc(100% + 1px);">
+    <div name="CenterContainer" class="Container" style=" top: 0; left: 0; width: 100%; height: 100%;">
+        <div name="Modal" class="Panel" style=" min-width: 250px; min-height: 276px; width: 100%; height: 100%; max-width: 360px; left: max(0px, calc((100% - 360px) / 2)); max-height: 380px; top: max(0px, calc(100% - 380px));">
+            <div name="Reference" class="TextureRect" style=" top: -27px; left: 0; width: 100%; height: calc(100% + 27px); display: none; background-image: url('References/3-item.png'); background-size: contain;"></div>
+            <div name="TextureRect" class="Container" style=" top: 28px; left: 30px; width: calc(100% - 60px); height: calc(99.9% - 233px);">
+                <div name="Emblems" class="Control" style=" width: 100%; height: 100%; max-width: 300px; left: max(0px, calc((100% - 300px) / 2));">
+                    <div name="TextureRect2" class="TextureRect" style=" top: 0; left: 0; width: 48.3%; height: 100%; background-image: url('Logos/PSG.LGD.png'); background-size: contain; background-position: center;"></div>
+                    <div name="TextureRect3" class="TextureRect" style=" top: 0; left: calc(50% + 5px); width: calc(50% - 5px); height: calc(100% + 1px); background-image: url('Logos/Evil Geniuses.png'); background-size: contain; background-position: center;"></div>
+                    <div name="TextureRect" class="TextureRect" style=" top: calc(50% - 40px); left: calc(50% - 40px); width: 80px; height: 80px; background-image: url('Logos/weplay.jpeg'); background-size: contain; background-position: center;"></div>
+                </div>
+            </div>
+            <button name="Close" class="Button" style=" top: 30px; left: calc(100% - 72px); width: 42px; height: 42px;">
+                <div name="HSeparator3" class="ColorRect" style=" top: calc(50% - 2px); left: calc(50% - 15px); width: 29px; height: 4px; transform: rotate(45deg); transform-origin: 14.5px 2px"></div>
+                <div name="HSeparator4" class="ColorRect" style=" top: calc(50% - 2px); left: calc(50% - 15px); width: 29px; height: 4px; transform: rotate(-45deg); transform-origin: 14.5px 2px"></div>
+            </button>
+            <div name="Control" class="Container" style=" top: calc(100% - 184px); left: 0; width: 100%; height: 184px;">
+                <div name="Control2" class="Control" style=" width: 100%; height: 100%; max-width: 360px; left: max(0px, calc((100% - 360px) / 2));">
+                    <div name="Variants" class="HBoxContainer" style=" top: 10px; left: 30px; width: calc(100% - 60px); height: 55px;">
+                        <div name="Button" class="Control" style=" flex-grow: 1;">
+                            <input type="radio" name="match-result" id="team-1">
+                            <label for="team-1" name="Variant" class="Button" style=" top: 0; left: 0; width: 100%; height: 36px; flex-grow: 1;">PSG.LGD</label>
+                            <div name="Label" class="Label" style=" top: calc(100% - 14px); left: 0; width: 100%; height: 14px; text-align: center;">1.23</div>
+                        </div>
+                        <div name="Button2" class="Control" style=" min-width: 42px; flex-grow: 1;">
+                            <input type="radio" name="match-result" id="draw">
+                            <label for="draw" name="Variant" class="Button" style=" top: 0; left: 0; width: 100%; height: 36px;">draw</label>
+                            <div name="Label" class="Label" style=" top: calc(100% - 14px); left: 0; width: 100%; height: 14px; text-align: center;">1.23</div>
+                        </div>
+                        <div name="Button3" class="Control" style=" flex-grow: 1;">
+                            <input type="radio" name="match-result" id="team-2">
+                            <label for="team-2" name="Variant" class="Button" style=" top: 0; left: 0; width: 100%; height: 36px; flex-grow: 1;">Evil Geniuses</label>
+                            <div name="Label" class="Label" style=" top: calc(100% - 14px); left: 0; width: 100%; height: 14px; text-align: center;">1.23</div>
+                        </div>
+                    </div>
+                    <div name="Control" class="Control" style=" top: 65px; left: 30px; width: calc(100% - 60px); height: 47px;">
+                        <div name="LineEdit3" class="Control" style=" top: 10px; left: 0; width: calc(50% - 5px); height: calc(100% - 20px);">
+                            <input name="Balance" class="LineEdit" style=" top: 0; left: 0; width: calc(100% - 39px); height: 100%; text-align: right;" placeholder="AMOUNT">
+                            <button name="Currency" class="Button" style=" top: 0; left: calc(100% - 39px); width: 39px; height: 100%;">USD</button>
+                        </div>
+                        <div name="LineEdit4" class="Control" style=" top: 10px; left: calc(50% + 5px); width: calc(50% - 5px); height: calc(100% - 20px);">
+                            <input name="Balance" class="LineEdit" style=" top: 0; left: 0; width: calc(100% - 39px); height: 100%; text-align: right;" value="200" disabled>
+                            <div name="Label" class="Label" style=" top: 0; left: 5px; width: calc(100% - 77px); height: 100%;">СЧЁТ:</div>
+                            <button name="Currency" class="Button" style=" top: 0; left: calc(100% - 39px); width: 39px; height: 100%;">USD</button>
+                        </div>
+                    </div>
+                    <button name="Buy" class="Button" style=" top: calc(100% - 60px); left: 64px; width: calc(100% - 128px); height: 36px;">PLACE BET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="cleaner.js"></script>
+<script>
+    var modal = document.querySelector('[name="Modal"]')
+    
+    function toggleModal(){
+        modal.classList.toggle('shown')
+    }
+
+    document.querySelector('[name="Item"]').onclick = toggleModal
+    modal.querySelector('[name="Close"]').onclick = toggleModal
+    modal.querySelector('[name="Buy"]').onclick = toggleModal
+</script>
+</body>
+</html>

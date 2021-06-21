@@ -1,0 +1,227 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://span_limiter.gd" type="Script" id=1]
+[ext_resource path="res://Items/Staff_of_Ainz_Ooal_Gown_large.png" type="Texture" id=2]
+
+[node name="Shop" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="Container" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+rect_max_size = Vector2( 720, 1e+07 )
+
+[node name="Control" type="Panel" parent="CenterContainer"]
+margin_right = 360.0
+margin_bottom = 640.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="Reference" type="TextureRect" parent="CenterContainer/Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -27.3517
+margin_bottom = -0.351746
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 0.516
+margin_left = 30.0
+margin_top = 30.0
+margin_right = -30.0
+margin_bottom = -0.240021
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="CenterContainer/Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -72.0
+margin_top = 30.0
+margin_right = -30.0
+margin_bottom = 72.0
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator3" type="ColorRect" parent="CenterContainer/Control/Close"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -15.0
+margin_top = -2.0
+margin_right = 14.0
+margin_bottom = 2.0
+rect_rotation = 45.0
+rect_pivot_offset = Vector2( 14.5, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator4" type="ColorRect" parent="CenterContainer/Control/Close"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -15.0
+margin_top = -2.0
+margin_right = 14.0
+margin_bottom = 2.0
+rect_rotation = -45.0
+rect_pivot_offset = Vector2( 14.5, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/Control"]
+anchor_top = 0.531
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 0.159973
+margin_right = -29.0
+margin_bottom = -106.0
+text = "Being the guild weapon as it is, the Staff of Ainz Ooal Gown was designed with supreme quality while taking on the name of the respective guild. It is a powerful item that was said to be the symbol of Ainz Ooal Gown, a guild comprised of entirely heteromorphic monsters. A guild master like Momonga would usually carry this staff as a symbol of their guild's might and power. However, the destruction of its guild weapon signifies the dissolution of their guild. That was why the staff is secretly stored in the most secure location with their powerful abilities never seeing the light of day. For such a reason, the staff was never handed to Momonga despite it being custom-made for him only, and instead was adorned on a wall in the heart of the Great Tomb of Nazarick."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Container" parent="CenterContainer/Control"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -106.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+rect_max_size = Vector2( 360, 1e+07 )
+
+[node name="Control2" type="Control" parent="CenterContainer/Control/Control"]
+margin_right = 360.0
+margin_bottom = 106.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CenterContainer/Control/Control/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -59.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit3" type="Control" parent="CenterContainer/Control/Control/Control2/Control"]
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 10.0
+margin_right = -5.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/Control/Control/Control2/Control/LineEdit3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -39.0
+text = "200"
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Control/Control/Control2/Control/LineEdit3/LineEdit"]
+margin_left = 5.0
+margin_right = 33.0
+margin_bottom = 27.0
+text = "COST:"
+valign = 1
+
+[node name="LineEdit2" type="Button" parent="CenterContainer/Control/Control/Control2/Control/LineEdit3"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -39.0
+text = "USD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit4" type="Control" parent="CenterContainer/Control/Control/Control2/Control"]
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 10.0
+margin_right = -30.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/Control/Control/Control2/Control/LineEdit4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -39.0
+text = "200"
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Control/Control/Control2/Control/LineEdit4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_right = -72.0
+text = "C4ET:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit2" type="Button" parent="CenterContainer/Control/Control/Control2/Control/LineEdit4"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -39.0
+text = "USD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buy" type="Button" parent="CenterContainer/Control/Control/Control2"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -60.0
+margin_right = -64.0
+margin_bottom = -24.0
+text = "BUY NOW"
+__meta__ = {
+"_edit_use_anchors_": false
+}

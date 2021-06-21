@@ -1,0 +1,154 @@
+html {
+    color: white;
+    background-color: #1d1d23;
+}
+.Panel {
+    background-color: #212126;
+    box-shadow: none;
+}
+.Button[name="SignIn"], .Button[name="Buy"], .Button[name="Variant"] {
+    color: white;
+    background-color: #7668cb;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding: 5px;
+}
+.Button[name="SignIn"]:hover, .Button[name="Buy"]:hover, .Button[name="Variant"]:hover {
+    background-color: #9b8ceb;
+}
+.Button[name="SignIn"] > span {
+    position: static;
+}
+.Button[name="Menu"], .Button[name="Back"], .OptionButton, .LineEdit:not(:disabled), .Button[name="Close"] {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: border 0.2s;
+}
+.Button[name="Menu"]:hover, .Button[name="Back"]:hover, .OptionButton:hover, .LineEdit:not(:disabled):hover, .Button[name="Close"]:hover {
+    border: 1px solid #9b8ceb;
+}
+.LineEdit:not(:disabled) {
+    border: none;
+    border-radius: 4px;
+    background-color: #44444b;
+    outline: none;
+    color: white;
+    transition: background-color 0.2s;
+    padding: 5px;
+}
+.LineEdit:not(:disabled):hover {
+    padding: 4px;
+}
+.LineEdit:not(:disabled):focus {
+    background-color: #57575f;
+}
+.ColorRect {
+    background-color: white;
+}
+.OptionButton {
+    color: white;
+    padding: 5px;
+}
+
+[name="Item"] {
+    background-color: transparent;
+    transition: background-color 0.1s;
+    border-radius: 4px;
+    
+    min-width: 180px;
+    min-height: 187px;
+}
+[name="Item"]:hover {
+    background-color: #57575f;
+}
+[name="Item"] > [name="TextureRect"] {
+    top: 17px;
+    left: 17px;
+    width: calc(100% - 34px);
+    height: calc(100% - 41px);
+    background-size: contain;
+    transition: all 0.2s;
+
+    border-radius: 4px;
+    background-position: center;
+}
+
+[name="Item"] > [name="Label"] {
+    top: 170px;
+    left: 17px;
+    width: calc(100% - 34px);
+    height: calc(100% - 170px);
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+[name="Balance"] {
+    background-color: #44444b;
+    border: none;
+    border-radius: 4px;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    color: white;
+    padding: 5px;
+}
+
+[name="Balance"]+[name="Label"] {
+    line-height: 27px;
+    opacity: 0.5;
+    overflow: hidden;
+    text-overflow: ":";
+}
+
+[name="Currency"] {
+    background-color: #76cb68;
+    border: none;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+[name="Logo"] {
+    line-height: 47px;
+    font-weight: bold;
+    font-size: 28px;
+    padding-left: 9.5px;
+}
+
+[name="ItemPreview"] {
+    background-color: #1d1d23;
+    border-radius: 4px;
+}
+
+[name="ShopItemPage"] {
+    top: 100%;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+[name="ShopItemPage"].shown {
+    top: 0;
+    opacity: 1;
+}
+
+[name="Shop"].covered * {
+    overflow: hidden !important;
+}
+
+[name="GridContainer"] {
+    justify-content: center;
+}
+
+.OptionButton {
+    background-color: #44444b;
+}

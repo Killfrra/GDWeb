@@ -1,0 +1,226 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="default_styles.css">
+    <link rel="stylesheet" href="shop_and_bets.css">
+    <style>
+        [name="MenuPage"] {
+            pointer-events: none;
+        }
+        [name="MenuPage"].showed {
+            pointer-events: all;
+        }
+        [name="MenuPage"] .VBoxContainer > * {
+            margin-bottom: 15px;
+        }
+        [name="MenuPage"] .HBoxContainer > * {
+            margin-left: 5px;
+        }
+        [name="MenuItems"] .Button {
+            background-color: #44444b;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            transition: background-color 0.2s;
+        }
+        [name="MenuItems"] .Button:hover {
+            background-color: #7668cb;
+        }
+        [name="MenuOverlay"] {
+            opacity: 0;
+            transition: opacity 0.2s;
+            background-color: rgba(33, 33, 38, 0.66);
+        }
+        [name="MenuPage"].showed > [name="MenuOverlay"] {
+            opacity: 1;
+        }
+        [name="MenuPanel"] {
+            width: 0 !important;
+            transition: width 0.2s;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+        [name="MenuPage"].showed > [name="MenuPanel"] {
+            width: 243px !important;
+        }
+    </style>
+</head>
+<body>
+<div name="Shop" class="Control" style=" top: 0; left: 0; width: 100%; height: 100%;">
+    <div name="Reference" class="TextureRect" style=" top: 0; left: 0; width: 360px; height: 793px; display: none; background-image: url('References/1-shop.png'); background-size: contain;"></div>
+    <div name="CenterContainer" class="Container" style=" top: 0; left: 0; width: 100%; height: 100%;">
+        <div name="Control" class="Panel" style=" min-width: 250px; width: 100%; height: 100%; max-width: 720px; left: max(0px, calc((100% - 720px) / 2));">
+            <div name="Panel" class="Panel" style=" top: 0; left: 0; width: 100%; height: 47px;">
+                <button name="Menu" class="Button" style=" top: 0; left: 0; width: 47px; height: 100%;">
+                    <div name="HSeparator" class="ColorRect" style=" top: calc(33% - 2px); left: 6px; width: calc(100% - 12px); height: 4px;"></div>
+                    <div name="HSeparator3" class="ColorRect" style=" top: calc(50% - 2px); left: 6px; width: calc(100% - 12px); height: 4px;"></div>
+                    <div name="HSeparator2" class="ColorRect" style=" top: calc(67% - 1px); left: 6px; width: calc(100% - 12px); height: 4px;"></div>
+                </button>
+                <div name="Logo" class="Label" style=" top: 0; left: 47px; width: 86px; height: 100%; text-align: center;">2<span style="position: static; color: red;">X</span>Bet</div>
+                <div name="Control" class="Control" style=" top: 0; left: 133px; width: calc(100% - 180px); height: 100%;">
+                    <div name="Control" class="Container" style=" top: 0; left: 0; width: 100%; height: 100%; text-align: right;">
+                        <div name="Control" class="Control" style=" width: 100%; height: 100%; max-width: 191px; left: max(0px, 100% - 191px);">
+                            <button name="SignIn" class="Button" style=" top: 5px; left: 5px; width: calc(100% - 10px); height: calc(100% - 10px); min-width: 63px;">SIGN IN THROUGH STEAM</button>
+                        </div>
+                    </div>
+                </div>
+                <a href="bets.html" name="Back" class="Button" style=" top: 0; left: calc(100% - 47px); width: 47px; height: 100%;">
+                    <div name="ColorRect" class="ColorRect" style=" top: 22px; left: 6px; width: 31px; height: 4px;"></div>
+                    <div name="ColorRect2" class="ColorRect" style=" top: 24px; left: 40px; width: 24px; height: 4px; transform: rotate(135deg);"></div>
+                    <div name="ColorRect3" class="ColorRect" style=" top: 26px; left: 38px; width: 24px; height: 4px; transform: rotate(-135deg);"></div>
+                </a>
+            </div>
+            <div name="Control" class="Control" style=" top: 47px; left: 0; width: 100%; height: 43px;">
+                <div name="Control" class="Control" style=" top: 5px; left: 5px; width: calc(100% - 10px); height: calc(100% - 10px);">
+                    <div name="Control" class="Control" style=" top: 0; left: 0; width: calc(50% - 2px); height: 100%;">
+                        <input name="Balance" class="LineEdit" style=" top: 0; left: 0; width: calc(100% - 39px); height: 100%; text-align: right;" disabled value="200">
+                        <button name="Currency" class="Button" style=" top: 0; left: calc(100% - 39px); width: 39px; height: 100%;">USD</button>
+                    </div>
+                    <input name="Search" class="LineEdit" style=" top: 0; left: calc(50% + 2px); width: calc(50% - 2px); height: 100%; text-align: right;" placeholder="type to search">
+                </div>
+            </div>
+            <div name="Control2" class="Control" style=" top: 90px; left: 0; width: 100%; height: 43px;">
+                <div name="Control" class="Control" style=" top: 5px; left: 5px; width: calc(100% - 10px); height: calc(100% - 10px);">
+                    <select name="Panel" class="OptionButton" style=" top: 0; left: 0; width: calc(50% - 2px); height: 100%;">
+                        <option>YGGDRASIL</option>
+                    </select>
+                    <select name="LineEdit" class="OptionButton" style=" top: 0; left: calc(50% + 2px); width: calc(50% - 2px); height: 100%;">
+                        <option>Any Class</option>
+                        <option>Low Class</option>
+                        <option>Middle Class</option>
+                        <option>High Class</option>
+                        <option>Legendary Class</option>
+                    </select>
+                </div>
+            </div>
+            <div name="GridContainer2" class="ScrollContainer" style=" top: 133px; left: 0; width: 100%; height: calc(100% - 133px); overflow-x: auto; overflow-y: auto;">
+                <div name="GridContainer" class="GridContainer" style=" flex-grow: 1;">
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Items/Staff_of_Ainz_Ooal_Gown.png');"></div>
+                        <div name="Label" class="Label">Staff of Ainz Ooal Gown</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Items/Shooting_Star.png');"></div>
+                        <div name="Label" class="Label">Shooting Star</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Items/Haste_Boots.png');"></div>
+                        <div name="Label" class="Label">Haste Boots</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Items/Healing_Potion.png');"></div>
+                        <div name="Label" class="Label">Healing Potion</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Items/Spuit_Lance.png');"></div>
+                        <div name="Label" class="Label">Spuit Lance</div>
+                    </div>
+                    <div name="Item" class="Control">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Items/Jarngreipr.png');"></div>
+                        <div name="Label" class="Label">Jarngreipr</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div name="ShopItemPage" class="Control" style=" left: 0; width: 100%; height: 100%;">
+    <div name="CenterContainer" class="Container" style=" top: 0; left: 0; width: 100%; height: 100%;">
+        <div name="Control" class="Panel" style=" min-width: 250px; width: 100%; height: 100%; max-width: 720px; left: max(0px, calc((100% - 720px) / 2));">
+            <div name="Reference" class="TextureRect" style=" top: -27px; left: 0; width: 100%; height: calc(100% + 27px); display: none; background-image: url('References/3-item.png'); background-size: contain;"></div>
+            <div name="ItemPreview" class="TextureRect" style=" top: 30px; left: 30px; width: calc(100% - 60px); height: calc(51.6% - 30px); background-image: url('Items/Staff_of_Ainz_Ooal_Gown_large.png'); background-size: contain; background-position: center;"></div>
+            <button name="Close" class="Button" style=" top: 30px; left: calc(100% - 72px); width: 42px; height: 42px;">
+                <div name="HSeparator3" class="ColorRect" style=" top: calc(50% - 2px); left: calc(50% - 15px); width: 29px; height: 4px; transform: rotate(45deg); transform-origin: 14.5px 2px"></div>
+                <div name="HSeparator4" class="ColorRect" style=" top: calc(50% - 2px); left: calc(50% - 15px); width: 29px; height: 4px; transform: rotate(-45deg); transform-origin: 14.5px 2px"></div>
+            </button>
+            <div name="RichTextLabel" class="RichTextLabel" style=" top: 53.1%; left: 30px; width: calc(100% - 59px); height: calc(46.9% - 106px);">Being the guild weapon as it is, the Staff of Ainz Ooal Gown was designed with supreme quality while taking on the name of the respective guild. It is a powerful item that was said to be the symbol of Ainz Ooal Gown, a guild comprised of entirely heteromorphic monsters. A guild master like Momonga would usually carry this staff as a symbol of their guild's might and power. However, the destruction of its guild weapon signifies the dissolution of their guild. That was why the staff is secretly stored in the most secure location with their powerful abilities never seeing the light of day. For such a reason, the staff was never handed to Momonga despite it being custom-made for him only, and instead was adorned on a wall in the heart of the Great Tomb of Nazarick.</div>
+            <div name="Control" class="Container" style=" top: calc(100% - 106px); left: 0; width: 100%; height: 106px;">
+                <div name="Control2" class="Control" style=" width: 100%; height: 100%; max-width: 360px; left: max(0px, calc((100% - 360px) / 2));">
+                    <div name="Control" class="Control" style=" top: 0; left: 0; width: 100%; height: calc(100% - 59px);">
+                        <div name="LineEdit3" class="Control" style=" top: 10px; left: 30px; width: calc(50% - 35px); height: calc(100% - 20px);">
+                            <input name="Balance" class="LineEdit" style=" top: 0; left: 0; width: calc(100% - 39px); height: 100%; text-align: right;" value="200" disabled>
+                                <div name="Label" class="Label" style=" top: 0; left: 5px; width: calc(100% - 72px); height: 27px;">COST:</div>
+                            
+                            <button name="Currency" class="Button" style=" top: 0; left: calc(100% - 39px); width: 39px; height: 100%;">USD</button>
+                        </div>
+                        <div name="LineEdit4" class="Control" style=" top: 10px; left: calc(50% + 5px); width: calc(50% - 35px); height: calc(100% - 20px);">
+                            <input name="Balance" class="LineEdit" style=" top: 0; left: 0; width: calc(100% - 39px); height: 100%; text-align: right;" value="200" disabled>
+                                <div name="Label" class="Label" style=" top: 0; left: 5px; width: calc(100% - 72px); height: 27px;">BALANCE:</div>
+                            
+                            <button name="Currency" class="Button" style=" top: 0; left: calc(100% - 39px); width: 39px; height: 100%;">USD</button>
+                        </div>
+                    </div>
+                    <button name="Buy" class="Button" style=" top: calc(100% - 60px); left: 64px; width: calc(100% - 128px); height: 36px;">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div name="MenuPage" class="Control" style=" top: 0; left: 0; width: 100%; height: 100%;">
+    <div name="MenuOverlay" class="Control" style=" top: 0; left: 0; width: 100%; height: 100%;">
+        <div name="Control" class="Control" style=" top: 30px; left: 127px; width: calc(100% - 157px); height: 60px; min-width: 80px;">
+            <button name="Close" class="Button" style=" top: 0; left: calc(100% - 59px); width: 59px; height: 100%; min-width: 60px;">
+                <div name="HSeparator3" class="ColorRect" style=" top: calc(50% - 2px); left: calc(50% - 15px); width: 29px; height: 4px; transform: rotate(45deg); transform-origin: 14.5px 2px"></div>
+                <div name="HSeparator4" class="ColorRect" style=" top: calc(50% - 2px); left: calc(50% - 15px); width: 29px; height: 4px; transform: rotate(-45deg); transform-origin: 14.5px 2px"></div>
+            </button>
+        </div>
+    </div>
+    <div name="MenuPanel" class="Panel" style=" top: 0; left: 0; width: 243px; height: 100%;">
+        <div name="Control" class="Control" style=" top: 0; left: 0; width: 100%; height: 100%; min-width: 232px; min-height: 464px;">
+            <div name="5-Menu bets" class="TextureRect" style=" top: 0; left: 0; width: 369px; height: 600px; display: none; background-image: url('References/5-Menu bets.png'); background-size: contain;"></div>
+            <div name="MenuLabel" class="Label" style=" top: 50px; left: 30px; width: 31px; height: 14px; transform: scale(2.8, 2.8);">Menu</div>
+            <div name="MenuItems" class="VBoxContainer" style=" top: 119px; left: 30px; width: 177px; height: calc(100% - 149px); min-width: 183px;">
+                <select name="SelectLanguage" class="OptionButton" style=" min-height: 33px;">
+                    <option>English</option>
+                    <option>Russian</option>
+                </select>
+                <select name="SelectCurrency" class="OptionButton" style=" min-height: 33px;">
+                    <option>USD</option>
+                    <option>RUB</option>
+                </select>
+                <button name="Inventory" class="Button" style=" min-height: 33px;">Inventory</button>
+                <button name="ShoppingCart" class="Button" style=" min-height: 33px;">Shopping cart</button>
+                <button name="YourItems" class="Button" style=" min-height: 33px;">Your items</button>
+                <div name="Bottom" class="Control" style=" min-height: 80px; flex-grow: 1;">
+                    <button name="Terms" class="Button" style=" top: calc(100% - 80px); left: 0; width: 100%; height: 33px; min-height: 33px;">Terms</button>
+                    <div name="Icons" class="HBoxContainer" style=" top: calc(100% - 33px); left: 0; width: 100%; height: 33px; min-height: 33px;">
+                        <div name="TextureRect" class="TextureRect" style=" background-image: url('Socials/facebook.ico'); background-size: contain; background-position: center; min-width: 33px;"></div>
+                        <div name="TextureRect2" class="TextureRect" style=" background-image: url('Socials/tg.png'); background-size: contain; background-position: center; min-width: 33px;"></div>
+                        <div name="TextureRect3" class="TextureRect" style=" background-image: url('Socials/twi.png'); background-size: contain; background-position: center; min-width: 33px;"></div>
+                        <div name="TextureRect4" class="TextureRect" style=" background-image: url('Socials/yt.png'); background-size: contain; background-position: center; min-width: 33px;"></div>
+                        <div name="TextureRect5" class="TextureRect" style=" background-image: url('Socials/twitter.ico'); background-size: contain; background-position: center; min-width: 33px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="cleaner.js"></script>
+<script>
+    var shopPage = document.querySelector('[name="Shop"]')
+    var menuPage = document.querySelector('[name="MenuPage"]')
+    var shopItemPage = document.querySelector('[name="ShopItemPage"]')
+    var item = document.querySelector('[name="Item"]')
+    var itemPreview = item.querySelector('.TextureRect')
+
+    function toggleMenu(){
+        shopPage.classList.toggle('covered')
+        menuPage.classList.toggle('showed')
+    }
+
+    function toggleItemDesc(){
+        shopPage.classList.toggle('covered')
+        shopItemPage.classList.toggle('shown')
+    }
+
+    document.querySelector('[name="Menu"]').onclick = toggleMenu
+    menuPage.querySelector('[name="MenuOverlay"]').onclick = toggleMenu
+
+    item.onclick = toggleItemDesc
+    shopItemPage.querySelector('[name="Close"]').onclick = toggleItemDesc
+    shopItemPage.querySelector('[name="Buy"]').onclick = toggleItemDesc
+    
+</script>
+</body>
+</html>

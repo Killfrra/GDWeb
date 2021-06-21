@@ -1,0 +1,292 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://span_limiter.gd" type="Script" id=3]
+
+[node name="Shop" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reference" type="TextureRect" parent="."]
+visible = false
+margin_right = 360.0
+margin_bottom = 793.0
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="Container" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+rect_max_size = Vector2( 720, 1e+07 )
+
+[node name="Control" type="Panel" parent="CenterContainer"]
+margin_right = 360.0
+margin_bottom = 640.0
+rect_min_size = Vector2( 360, 0 )
+
+[node name="Panel" type="Panel" parent="CenterContainer/Control"]
+anchor_right = 1.0
+margin_bottom = 47.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="CenterContainer/Control/Panel"]
+anchor_bottom = 1.0
+margin_right = 47.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator" type="ColorRect" parent="CenterContainer/Control/Panel/Menu"]
+anchor_top = 0.33
+anchor_right = 1.0
+anchor_bottom = 0.33
+margin_left = 6.0
+margin_top = -2.0
+margin_right = -6.9
+margin_bottom = 2.00623
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator3" type="ColorRect" parent="CenterContainer/Control/Panel/Menu"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 6.0
+margin_top = -2.0
+margin_right = -6.9
+margin_bottom = 2.0
+
+[node name="HSeparator2" type="ColorRect" parent="CenterContainer/Control/Panel/Menu"]
+anchor_top = 0.66
+anchor_right = 1.0
+anchor_bottom = 0.66
+margin_left = 6.10511
+margin_top = -1.28421
+margin_right = -6.89489
+margin_bottom = 2.71579
+
+[node name="Logo" type="Label" parent="CenterContainer/Control/Panel"]
+anchor_bottom = 1.0
+margin_left = 47.0
+margin_right = 122.0
+text = "2XBet"
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="CenterContainer/Control/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 122.0
+margin_right = -47.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Container" parent="CenterContainer/Control/Panel/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+rect_max_size = Vector2( 191, 1e+07 )
+align = 2
+
+[node name="Control" type="Control" parent="CenterContainer/Control/Panel/Control/Control"]
+margin_right = 191.0
+margin_bottom = 47.0
+
+[node name="SignIn" type="Button" parent="CenterContainer/Control/Panel/Control/Control/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+rect_min_size = Vector2( 63, 0 )
+text = "SIGN IN THROUGH STEAM"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="CenterContainer/Control/Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -47.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/Control/Panel/Back"]
+margin_left = 6.0
+margin_top = 22.0
+margin_right = 37.0
+margin_bottom = 26.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="CenterContainer/Control/Panel/Back"]
+margin_left = 40.3239
+margin_top = 24.3149
+margin_right = 64.3239
+margin_bottom = 28.3149
+rect_rotation = 135.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="CenterContainer/Control/Panel/Back"]
+margin_left = 38.0597
+margin_top = 26.6237
+margin_right = 62.0597
+margin_bottom = 30.6237
+rect_rotation = -135.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CenterContainer/Control"]
+anchor_right = 1.0
+margin_top = 47.0
+margin_bottom = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CenterContainer/Control/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="Control" type="Control" parent="CenterContainer/Control/Control/Control"]
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_right = -2.0
+
+[node name="LineEdit2" type="LineEdit" parent="CenterContainer/Control/Control/Control/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -39.0
+text = "200"
+align = 2
+editable = false
+
+[node name="LineEdit3" type="Button" parent="CenterContainer/Control/Control/Control/Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -39.0
+text = "USD"
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/Control/Control/Control"]
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+align = 2
+placeholder_text = "type to search"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="CenterContainer/Control"]
+anchor_right = 1.0
+margin_top = 90.0
+margin_bottom = 133.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CenterContainer/Control/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="Panel" type="OptionButton" parent="CenterContainer/Control/Control2/Control"]
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 0.0999999
+margin_right = -2.0
+
+[node name="LineEdit" type="OptionButton" parent="CenterContainer/Control/Control2/Control"]
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_right = -0.0999756
+
+[node name="GridContainer2" type="ScrollContainer" parent="CenterContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 133.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/Control/GridContainer2"]
+margin_right = 360.0
+margin_bottom = 187.0
+size_flags_horizontal = 3
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item" type="Control" parent="CenterContainer/Control/GridContainer2/GridContainer"]
+margin_right = 180.0
+margin_bottom = 187.0
+rect_min_size = Vector2( 180, 187 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/Control/GridContainer2/GridContainer/Item"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = 17.0
+margin_right = -17.0
+margin_bottom = -24.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Control/GridContainer2/GridContainer/Item"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = 170.0
+margin_right = -17.0
+text = "Dragonclaw Hook"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -22,12 +22,16 @@
 <script>
     var source = document.getElementById('source')
     var result = document.getElementById('result')
+    var process = {
+        argv: []
+    }
     function require(mod){
         return {
             readFileSync(file, enc){
-                return source.value
+                return (file == 'test.tscn') ? source.value : ''
             },
             writeFileSync(file, content){
+                if(file === 'test.html')
                 result.value = content
             }
         }
